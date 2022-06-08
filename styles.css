@@ -1,0 +1,162 @@
+:root {
+    box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+body * + * {
+    margin-top: 0.9em;
+    margin-bottom: 0;
+}
+
+body {
+    margin: 0 auto;
+    background-color: hsl(217, 54%, 11%);
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    box-sizing: inherit;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 3em auto 1em;
+    width: 18rem;
+    background-color: hsl(215, 32%, 27%);
+    padding: 1.5em;
+    border-radius: .8em;
+}
+
+.container img {
+    border-radius: .5em;
+}
+
+.container img:active {
+    color: hsl(178, 100%, 50%);
+}
+
+.container img:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.container h1 {
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.container h1:active,
+.container h1:hover,
+.container .name:hover,
+.container .name:active {
+    cursor: pointer;
+    color: hsl(178, 100%, 50%);
+}
+
+.text {
+    color: hsl(215, 51%, 70%);
+    font-weight: 300;
+    margin-bottom: 0;
+    font-size: 0.8rem;
+}
+
+.ethereum {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: .5em;
+}
+
+.eth, .date {
+    display: inline-flex;
+    align-items: center;
+}
+
+#eth {
+    color: hsl(178, 100%, 50%);
+    font-weight: 600;
+    font-size: 1rem;
+    margin: .5em;
+}
+
+#date {
+    color: hsl(215, 51%, 70%);
+    margin: .3em;
+}
+
+hr {
+  border:none;
+  width: 100%;
+  height: .8em;
+  border-bottom: 1px solid #6a6a69;
+  box-shadow: 0 20px 20px -20px #333;
+  margin: .1em auto; 
+  color: hsl(215, 32%, 27%);
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.author img {
+    width: 2em;
+    border: 1px solid rgb(214, 211, 211);
+    border-radius: 50%;
+}
+
+.author-info {
+    padding-left: 1em;
+    margin-top: 0;
+}
+
+.author-info > span {
+    color: #a7a7a3;
+}
+
+.author .name {
+    color: hsl(0, 0%, 100%);
+}
+
+.attribution {
+    font-size: .7em;
+    text-align: center;
+    color: #a7a7a3;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
+
+@media only screen and  (max-width: 1440px) {
+    .container h1 {
+        font-size: 1rem;
+    }    
+
+    #eth, #date {
+        font-size: 0.8rem;
+    }
+
+    hr {
+        border-bottom: 1px solid #494948;
+        height: .5em;
+    }
+    .ethereum {
+        margin-top: .2em;
+    }
+
+    .author img {
+        width: 1.5em;
+    }
+
+    .author-info {
+        font-size: .8em;
+    }
+}
